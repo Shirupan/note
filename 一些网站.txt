@@ -1,0 +1,670 @@
+1.前端开发面试题1：点击打开链接
+  2.前端开发面试题2：https://github.com/hawx1993/Front-end-Interview-questions
+  3.iOS面试题汇总：http://www.cocoachina.com/programmer/20151019/13746.html
+  4.程序员简历模版：https://github.com/geekcompany/ResumeSample
+
+  5.那些著名或非著名的iOS面试题－前编:http://www.jianshu.com/p/8f16613861fa
+
+  6.iOS开发面试高频题: http://www.58maisui.com/2016/05/04/article-98/
+
+  7.69个经典Spring面试题和答案:点击打开链接
+
+   8.保研机试刷题集合：http://www.guolanzhe.com/?p=582#more-582
+
+  9.10个值得深思的PHP面试问题：http://www.58maisui.com/2016/05/01/article-61/
+
+ 10.阿里、百度、搜狐等公司社招面试记录与总结: 点击打开链接
+
+ 11.LeetCode solutions in JavaScript (JS) with simple explaination: 点击打开链接
+
+ 12.Java线程面试题Top50: http://easygeek.com.cn/topic/27eb6b9066c443eca4bae01f33bdb043.html
+
+  13.Java集合相关面试问题和答案：http://codecloud.net/java-set-interviews-7716.html
+
+ 14.各大互联网公司2014前端笔试面试题–JavaScript篇：点击打开链接
+
+ 15.一道面试题：遇到大规模Oracle坏块该怎么处理？ http://www.58maisui.com/2016/05/22/a-4/
+
+ 16.我的实习生面试之旅（拿下阿里巴巴、腾讯、百词斩offer）：点击打开链接
+
+ 17.BAT及各大互联网公司2014前端笔试面试题: http://www.cnblogs.com/coco1s/category/831730.html
+
+  18.酷壳 Coolshell：http://coolshell.cn/
+
+ 19.Matrix67大牛的博客: http://www.matrix67.com/blog/
+
+ 20.July的CSDN博客：http://blog.csdn.net/v_JULY_v
+
+ 21.何海涛博客：http://zhedahht.blog.163.com/
+
+ 22.笔试面试的经典：Cracking the coding interview--问题与解答:点击打开链接
+
+ 23.Hackbuteer1的专栏: http://blog.csdn.net/hackbuteer1
+
+ 24.国外的十三道JavaScript题：http://www.58maisui.com/2016/06/03/a-88/
+
+ 25.5个经典的前端面试问题：http://ourjs.com/detail/542152eb91e3afe823000004
+
+ 26.Java线程面试题Top 50：http://www.importnew.com/12773.html
+
+ 27.你有必要知道的25个JavaScript面试题: http://www.open-open.com/lib/view/open1451796617120.html
+
+  28.44个Javascript变态题解析(上): https://segmentfault.com/a/1190000005681454
+
+ 29.44个Javascript变态题解析(下)：https://segmentfault.com/a/1190000005682214
+
+ 30.iOS面试宝典: http://www.henishuo.com/ios-interview-entrance/
+
+ 31.5道JavaScript练习题: http://www.spotty.com.cn/archives/99/
+
+ 32.115题Java面试问题和答案之JSP: http://www.zicheng.net/article/68.htm
+
+  33.高并发性能调试经验分享: https://zhuanlan.zhihu.com/p/21348220
+
+ 34.我是如何面试WEB前端开发人员的：http://www.techug.com/interviewing-a-front-end-developer
+
+ 35.程序员如何准备面试中的算法:http://bbs.jointforce.com/topic/16983
+
+ 36.25个Apache面试题汇总:http://www.codeceo.com/article/15-apache-interview-question.html
+
+ 37.11个高级MySQL数据库面试问题和答案: http://www.codeceo.com/article/11-mysql-interview-question.html
+
+ 38.经典的Java基础面试题集锦:http://www.codeceo.com/article/java-interview-question.html
+
+ 39.Java编程常见问题汇总:http://www.codeceo.com/article/java-programming-tips.html
+
+ 40.Java程序员的10道XML面试题:http://www.codeceo.com/article/10-xml-questions-java-programmer.html
+
+ 
+
+B.开源源码：
+
+ 1.拨云剑：（源码jar包，软件源码）：http://www.boyunjian.com/
+ 2.Top 10 Algorithms for CodingInterview : 点击打开链接
+ 3.GitHub上整理的一些工具:  http://get.ftqq.com/6661.get
+ 4.世界一流的医学影像开发包：http://leadtools.gcpowertools.com.cn/products/medical-sdk/
+  5.Facebook-GitHub: https://github.com/facebook
+  6.OpenCV：http://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html
+ 7.专供DevOps和系统管理员的免费资源汇集：http://www.yunweipai.com/archives/6918.html
+  8.Python资源大全中文版: https://github.com/jobbole/awesome-python-cn
+  9.微软开发者中文杂志：https://msdn.microsoft.com/zh-cn/magazine/
+ 10.史上最全Hadoop学习资源集合：http://www.58maisui.com/2016/05/21/article-229/
+ 11.《快乐码农》第3期 大爱Javascript：http://www.codeceo.com/article/weekly-no-3.html
+ 12.在线API文档：http://devdocs.io/
+  13.国内各大互联网公司相关技术站点2.0版：http://www.cnblogs.com/IT-Bear/p/3191423.html
+ 14.程序员技术成长秘籍: http://www.phpxs.com/post/5090
+ 15.淘宝阿里巴巴开源软件大全(下): http://www.xttblog.com/?a=b&p=564
+ 16.谷歌推荐的计算机科学学习路线：http://www.52cs.org/?p=902
+  17.42 Podcasts for Developers and Programmers：点击打开链接
+ 18.国外程序员经常用的二十八个学习网站: http://www.smartcitychina.cn/QianYanJiShu/2016-07/7394.html
+ 19.Python Cookbook 3rd Edition Documentation:http://python3-cookbook.readthedocs.io/zh_CN/latest/
+ 
+C.编程工具软件:
+ 1.前端页面开发IDE软件- WebStorm: http://www.jetbrains.com/webstorm/
+ 2.神级命令行软件Tmux:  http://www.wushxin.top/2016/03/28/%E4%BD%BF%E7%94%A8tmux.html
+
+ 3.Redis监控工具—Redis-stat、RedisLive: http://wxmimperio.tk/2016/02/25/Redis-Monitor-Tools/
+
+ 4.实验楼：https://www.shiyanlou.com/
+
+ 5.为Web开发者准备的10个最新工具: http://www.codeceo.com/article/10-web-tools-for-developer.html
+
+ 6.撸一撸Vim：http://zhongmingmao.me/2016/03/30/vim_begin.html
+
+ 7.OpenCV+Python+Windows下的环境搭建：点击打开链接
+
+ 8.AndroidStudio优秀插件汇总: 点击打开链接
+
+ 9.33款可用来抓数据的开源爬虫软件工具（一）：点击打开链接
+
+ 10.20+优秀的Icons图标合集：https://xituqu.com/207.html?
+
+ 11.Facebook开源软件列表: 点击打开链接
+
+ 12.阿里巴巴开源技术汇总:115个软件: 点击打开链接
+
+ 13.推荐21个最近很流行的优秀PHP框架: http://u.cxyblog.com/2/article-aid-119.html
+
+ 14.程序员福利：各大平台免费接口: 点击打开链接
+
+  15.The Fuck：http://t.ioreq.com/gh/nvbn/thefuck
+
+ 16.最牛程序员必备软件大比拼：http://www.58maisui.com/2016/06/11/a-145/
+
+ 17.程序员必备十个神器：http://www.58maisui.com/2016/06/11/a-144/
+
+ 18.Markdown语法说明(简体中文版)：http://www.appinn.com/markdown/
+
+ 19.如何将Chrome变成开发利器，开发者们在用这些插件:http://www.w3ctech.com/topic/1833
+
+ 
+
+D.Java:
+
+  1.Java开源大全：http://www.open-open.com/
+
+  2.LTS轻量级分布式任务调度框架(Light Task Scheduler)：点击打开链接
+
+ 3.技术在线学习文档： http://www.runoob.com/
+
+  4.技术百科知识库：http://lib.csdn.net/index
+
+  5.dubbo用户指南：http://dubbo.io/User+Guide-zh.htm#UserGuide-zh-webservice%3A%2F%2F
+
+  6.CSDN知识库-Hadoop: http://lib.csdn.net/base/20/structure
+
+   7.Google的眼光: 点击打开链接
+
+  8.程序员的资料库在线文档教程：http://w3cschool.codecloud.net/
+
+ 9.一个超好玩的路径搜索在线演示网站：http://www.webhek.com/pathfinding
+
+ 10.Spring framework MVC 4.2.X无web.xml搭建web工程:http://blog.tingyun.com/web/article/detail/320
+
+ 11.Java NIO系列教程:  http://www.importnew.com/18763.html
+
+ 12.HadoopYARN架构设计要点：http://shiyanjun.cn/archives/1119.html
+
+ 13.那些年，追过的开源软件和技术：点击打开链接
+
+ 14.程序员必知的六种隔离技术：点击打开链接
+
+ 15.细聊分布式ID生成方法：http://sanpi.li/xi-liao-fen-bu-shi-id-sheng-cheng-fang-fa/
+
+ 16.JavaWeb的Cookie和Session使用场景：http://www.jiagoushuo.com/article/1000082.html
+
+ 17.Java动态代理机制详解（JDK和CGLIB，Javassist，ASM）:点击打开链接
+
+ 18.Java细粒度锁实现的几种方式: http://m.oschina.net/blog/673008
+
+ 19.什么是垃圾回收: http://it.deepinmind.com/gc/2015/06/02/what-is-garbage-collection.html
+
+ 20.Java的21个技术点和知识点归纳：http://www.smartcitychina.cn/QianYanJiShu/2016-05/7112.html
+
+ 21.Java知识图谱收集整理: http://www.jianshu.com/p/746c01a8535a
+
+ 22.编写让别人能够读懂的代码：http://www.cnblogs.com/richieyang/p/4840614.html
+
+ 23.15 Tools Java Developers Should Use After a Major Release: 点击打开链接
+
+ 24.8张图理解Java: http://www.importnew.com/11725.html
+
+ 25.100个高质量Java开发者博客：http://easygeek.com.cn/topic/e93f9d5a4bfe446d9180f6f8fb23c658
+
+ 26.我是一个Java class: 点击打开链接
+
+ 27.知道这20个正则表达式，能让你少写1,000行代码: http://www.jianshu.com/p/e7bb97218946
+
+ 28.Apache ZooKeeper服务启动源码解释: 点击打开链接
+
+ 29.性能优化那些事: 点击打开链接
+
+ 30.RPCX: 一个用Go实现的类似Dubbo的分布式RPC框架: 点击打开链接
+
+ 31.Java工程师成神之路：http://www.hollischuang.com/archives/489
+
+ 32.Spring知识点提炼: http://blog.csdn.net/u013256816/article/details/51386182
+
+ 33.Java开发常用的在线工具: http://www.hollischuang.com/archives/1459
+
+ 34.Java基础知识: http://bedoing.org/
+
+ 35.Maven学习笔记-常用命令和设置：http://blog.csdn.net/fw0124/article/details/48368695
+
+  36.程序中减少使用if语句的方法集锦：http://geek.csdn.net/news/detail/81154
+
+ 37.深入理解分布式事务:http://www.codeceo.com/article/distributed-transaction.html
+
+ 
+
+E.C++:
+
+ 1.最全面的C++资源、框架大全: http://www.codeceo.com/article/cpp-resource-framework.html
+
+ 2.图说C++对象模型：对象内存布局详解: http://www.cnblogs.com/QG-whz/p/4909359.html
+
+ 
+
+F.前端：
+
+ 1.JQueryEasyUI中文网：http://www.jeasyui.net/
+
+ 2.Handlebars.js:MinimalTemplating on Steroids：http://handlebarsjs.com/
+
+ 3.jQuery之家-自由分享jQuery、html5、css3的插件库: http://www.htmleaf.com/
+
+ 4.200+值得收藏的设计师资源站: http://www.ui.cn/detail/32941.html
+
+ 5.时间表 Timesheet.js：http://www.webhek.com/misc/timesheet-js
+
+ 6.IconRes最新图标: http://www.iconres.com/index.php
+
+ 7.i玩林: http://www.iwan0.com/
+
+ 8.CSS3教程：http://www.w3school.com.cn/css3/index.asp
+
+ 9.简明现代魔法图书馆：http://www.nowamagic.net/librarys/
+
+ 10.CoffeeScript中文：http://coffee-script.org/#try:alert%20%22Hello%20CoffeeScript!%22%0A%0Asda
+
+ 11.热前端-前端开发阅读分享网站：http://www.reqianduan.com/
+
+ 12.Node.js：https://nodejs.org/en/
+
+ 13.收集国内外大型网站架构演化历程:  http://www.jiandaima.com/blog/archives/238.html
+
+ 14.京东前端开发集成解决方案JDF:  https://github.com/putaoshu/jdf/
+
+ 15.7款无FlashHTML5动画特效: http://www.html5tricks.com/html5-effect-no-flash.html 
+
+ 16.前端开发大牛一箩筐：http://caibaojian.com/some-fe
+
+ 17.ECMAScript 6入门：http://es6.ruanyifeng.com/
+
+ 18.JQUERY集训营:http://hao.jser.com/archive/10319/
+
+ 19.JQuery API 1.11.3 速查表： http://codecloud.net/books/jquery/index.html
+
+ 20.JavaScript最佳实践：性能: http://www.jianshu.com/p/40144f3e3b4c
+
+ 21.CSS vs JS动画：谁更快？ http://zencode.in/19.CSS-vs-JS动画：谁更快？.html
+
+  22.30分钟快速掌握AngularJs: http://www.cnblogs.com/zhili/p/AngularJSQuickStart.html
+
+  23.12个JavaScript技巧: 点击打开链接
+
+ 24.JavaScript中的错误处理: 点击打开链接
+
+ 25.腾讯前端H5Demo库：http://css3lib.alloyteam.com/
+
+  26.前端跨域的整理: http://qiutc.me/post/cross-domain-collections.html
+
+ 27.这可能是史上最全的CSS自适应布局总结：http://www.cnblogs.com/qieguo/p/5421252.html
+
+ 28.JQuery- v1.10.2源码解读: https://github.com/chokcoco/jQuery-
+
+ 29.浅聊React组件实例: http://boke.iflsy.com/archives/1186
+
+ 30.每个程序员都要会的35个jQuery小技巧：点击打开链接
+
+ 31.JavaScript开发的45个技巧: http://www.phpxs.com/post/4476
+
+ 32.前端程序员应该知道的15个jQuery小技巧: http://www.phpxs.com/post/4407
+
+ 33.关于编写性能高效的JavaScript事件的技术: http://www.cnblogs.com/sharpxiajun/p/4111853.html
+
+ 34.Chrome调试工具Developer Tool技巧: 点击打开链接
+
+ 35.AngularJS样式指南介绍：http://www.codeceo.com/article/angularjs-style-guides.html
+
+ 36.浅谈JS创建对象的8种模式：http://www.phpxs.com/post/4308
+
+ 37.推荐10个短小却超实用的JavaScript代码段：http://www.jianshu.com/p/3ef822ec5a63
+
+ 38.全栈增长工程师实战: https://github.com/phodal/growth-in-action?
+
+ 39.Web前端资源汇总：http://www.cnblogs.com/jihua/p/webfront.html
+
+ 40.深入理解CSS伪类: http://www.cnblogs.com/xiaohuochai/p/5518943.html
+
+ 41.基于视口单位的网页排版: http://www.ido321.com/1675.html
+
+ 42.H5Lab: http://www.famanoder.com/h5lab
+
+ 43.4类JavaScript内存泄露及如何避免: 点击打开链接
+
+ 44.编写可维护的JavaScript: 点击打开链接
+
+ 45.20个很有用的CSS技巧: http://caibaojian.com/useful-css-tips.html
+
+  46.10款Web程序员必备的CSS工具：点击打开链接
+
+ 47.别责怪框架：我使用AngularJS和ReactJS的经验：http://www.zcfy.cc/article/327
+
+ 48.最全前端资源汇集: 点击打开链接
+
+ 49.100+超全的web开发工具和资源: https://xituqu.com/170.html
+
+ 50.jQuery API中文文档: http://www.css88.com/jqapi-1.9/
+
+ 51.W3Help: http://w3help.org/zh-cn/kb/
+
+ 52.前端开发指南：https://github.com/mulgore/Front-End-Develop-Guide
+
+ 53.关于JavaScript调试的十来个小Tips：https://segmentfault.com/a/1190000005624728
+
+  54.console对象--详解:http://www.spotty.com.cn/archives/29/
+
+ 55.60个有用CSS代码片段：https://segmentfault.com/a/1190000002773955
+
+ 56.JavaScript专业八级测试，你能做对几道？http://ourjs.com/detail/52fb82e13bd19c4814000001
+
+ 57.20张Cheat Sheet，让前端开发与设计效率x2：http://www.jianshu.com/p/bf266ec5a244
+
+ 58.jQuery实现MD5加密：http://u.cxyblog.com/14/article-aid-192.html
+
+ 59.HTML特殊字符的html、js、css写法汇总: http://www.chinarobots.cn/XingYeDongTai/696.html
+
+ 60.这些地方你不需要使用JavaScript: http://webres.wang/you-don-t-need-javascript-for-that/
+
+ 61.RESTful API编写指南: 点击打开链接
+
+  62.不可错过的JavaScript迷你库: http://yanhaijing.com/javascript/2015/12/29/mini-js-lib/
+
+ 63.使用CSS完成元素居中的七种方法: http://www.spotty.com.cn/archives/61/
+
+  64.跟着9张思维导图学习JavaScript: http://www.spotty.com.cn/archives/98/
+
+ 65.JavaScript标准参考教程（alpha）：http://javascript.ruanyifeng.com/#introduction
+
+ 66.前端e路：http://www.36zhen.com/t?id=3751
+
+ 67.你不需要jQuery：点击打开链接
+
+ 68.早该知道的7个JavaScript技巧: 点击打开链接
+
+ 69.CSS阴影效果(Box-shadow)用法趣味讲解: 点击打开链接
+
+ 70.编写高效CSS代码的一些建议:http://www.codeceo.com/article/do-better-css-code.html
+
+ 71.CSS3动画代码大集合:点击打开链接
+
+ 
+
+G.Web插件
+
+ 1.图表插件-ECharts：http://echarts.baidu.com/doc/example.html?qq-pf-to=pcqq.discussion
+
+  2.图表插件-Highcharts中文网：http://www.hcharts.cn/
+
+ 3.Zrender绘图：http://ecomfe.github.io/zrender/index.html
+
+ 4.JQueryThemeRoller：http://jqueryui.com/themeroller/
+
+ 5.jQuery树插件-zTree：http://www.ztree.me/v3/main.php#_zTreeInfo
+
+ 6.提示框插件SweetAlert
+
+   SweetAlert-js超酷消息警告框插件: http://www.htmleaf.com/jQuery/Lightbox-Dialog/20141218888.html
+
+   SweetAlert-演示6种不同的提示框效果: http://www.sucaihuo.com/js/190.html
+
+ 7.layer弹窗组件：http://layer.layui.com/
+
+ 8.10个jQuery时间选择器插件：http://webres.wang/10-jquery-time-picker-plugins/
+
+ 9.百度地图：http://mapv.baidu.com/demo/index.html
+
+ 10.新一代JavaScript控件：Wijmo 5：http://wijmo.gcpowertools.com.cn/products/wijmo-5/
+
+ 11.30分钟快速掌握Bootstrap：http://www.cnblogs.com/zhili/p/BoostrapQuickStart.html#rd
+
+ 12.使用Echarts实现动态曲线图表: http://www.cnblogs.com/Dreamer-1/p/5530221.html
+
+  13.jQuery WeUI-可能是最好用WeUI版本: http://www.spotty.com.cn/archives/55/
+
+ 
+
+H.博客
+
+ α.前端：
+
+  1.阮叔：阮一峰的网络日志：http://www.ruanyifeng.com/blog/
+
+  2.腾讯全端AlloyTeam团队Blog：http://www.alloyteam.com/author/tat-sheran/
+
+  3.支付宝前端：王员外-攻城师的实验室：http://lab.yuanwai.wang/
+
+  4.360前端：Jerry Qu ：https://imququ.com/
+
+  5.淘宝前端：小胡子哥 ：http://www.barretlee.com/entry/
+
+  6.前端 purplebamboo：http://purplebamboo.github.io/
+
+  7.淘宝网前端:嗷嗷：http://www.aoao.org.cn
+
+  8.百度新首页和百度空间前端：李成银：http://www.welefen.com/
+
+  9.淘宝前端框架KISSY的维护与开发：何一鸣：http://docs.kissyui.com/
+
+   10.土豆网前端：罗龙浩：http://luolonghao.iteye.com/
+
+  11.淘宝网前端团队卖家线：杨周璇：https://github.com/fool2fish/blog/issues?q=is%3Aopen
+
+  12.新浪微博前端基础架构组：钱宝坤：http://w3help.org/zh-cn/kb/
+
+  13.阿里巴巴国际站前端：http://www.cnblogs.com/dolphinX/
+
+ 14.景庄-Weiwei SUN：http://wwsun.github.io/
+
+ 15.腾讯前端 VaJoy-蓝邦珏：http://www.cnblogs.com/vajoy/
+
+ 16.ChokCoco：http://chokcoco.github.io/magicCss/html/index.html  点击打开链接
+
+ 17.Dean Edwards: http://dean.edwards.name/weblog/2005/10/add-event/
+
+ 
+
+ β.移动开发：
+
+ 1.UC技术博客：http://tech.uc.cn/
+
+ 2.美团点评技术团队：http://tech.meituan.com/
+
+ 3.腾讯Android工程师：胡凯：http://hukai.me/
+
+ 4.maxleap：https://blog.maxleap.cn/?lang=zh
+
+ 5.iOS标哥的技术博客：http://www.henishuo.com/
+
+ 6.Android杂文-yydcdut：http://yydcdut.com/
+
+ 7.常见的八种导致APP内存泄漏的问题: 点击打开链接
+
+ 8.alighters：http://alighters.com/
+
+  9.lightSky‘Blog: http://www.lightskystreet.com/
+
+ 10.雷纯锋: http://www.leichunfeng.com/
+
+ 
+
+  γ.后台：
+
+   1.奇虎360技术博客：http://blogs.360.cn/
+ 2.JohnHany的博客: http://johnhany.net/
+ 3.桃子 Nicol TAO：http://taozj.org/
+ 4.阿里中间件团队博客：http://jm.taobao.org/
+ 5. Whatbeg's blog：http://whatbeg.com/     
+ 
+ δ.Net:
+   1.逆心: http://www.cnblogs.com/kissdodog/
+ 
+ζ.PHP:
+ 1.雷雪松：http://www.leixuesong.cn/
+ 2.九个很有用的PHP代码：http://www.phpxs.com/post/5091
+ 
+ 
+ε.个人博客：
+ 1.胡峻峥：http://www.cnblogs.com/hujunzheng
+     
+I.移动开发
+
+    移动开发周刊：http://mobilev5.github.io/
+
+  ㈠ Android
+
+  1.微信公众平台开发：http://www.cnblogs.com/txw1958/p/wxpay-mkt-transfer.html
+
+    2.微信支付SDK-两行代码解决支付: 点击打开链接
+
+  3.自学Android资料大全: http://bbs.jiandaima.com/thread-306-1-1.html
+
+  4.Android性能优化典范之多线程篇：点击打开链接
+
+  5.Java开发者应当知道的7个最佳Android开发库: http://www.wanwuyun.com/pages/news/315.html
+
+  6.腾讯质量开放平台WeTest: http://wetest.qq.com/lab/
+
+  7.Android架构初探：http://www.lightskystreet.com/2016/05/20/android-architecture/
+
+  8.开源项目Philm的MVP架构分析：http://www.lightskystreet.com/2015/02/10/philm_mvp/
+
+  9.如何自学Android: http://gityuan.com/2016/04/24/how-to-study-android/?rel=time
+
+  10.Android通用流行框架大全: http://www.phpxs.com/post/5067
+
+  11.Android开发书籍推荐:从入门到精通系列学习路线书籍介绍: 点击打开链接
+
+  12.加载动画：LoadingDrawable：https://github.com/dinuscxj/LoadingDrawable
+
+  13.Android学习资料收集：https://github.com/Freelander/Android_Data
+
+ 
+
+   ㈡ iOS
+
+ 1.Swift中10个震惊小伙伴的单行代码: http://swift.gg/2016/04/18/10-Swift-One-Liners-To-Impress-Your-Friends/
+
+  2.Swift语言指南：https://github.com/ipader/SwiftGuide/blob/master/weekly/Issue-53.md
+
+  3.iOS完整App资源收集: http://www.henishuo.com/ios-app-fully-code/
+
+ 4.百度iOS技术周报：https://github.com/BaiduHiDeviOS/iOS-Tech-Weekly
+
+
+
+J.算法
+
+ 1.关于ACM的一些资料：http://www.cnblogs.com/gpcuster/archive/2007/06/14/782955.html
+
+ 2.ACM：http://github.thinkingbar.com/
+
+ 3.LeetCode: https://leetcode.com/problemset/algorithms/
+
+ 4.搜索引擎索引数据结构和算法：点击打开链接
+
+
+
+K.安全
+
+ 1.WooYun知识库-360安全卫士：http://drops.wooyun.org/author/360%E5%AE%89%E5%85%A8%E5%8D%AB%E5%A3%AB
+
+  2.WooYun知识库: http://drops.wooyun.org/
+
+  3.有https就够安全了吗？:http://rdcqii.hundsun.com/portal/article/421.html
+
+  4.漫谈流量劫持: http://drops.wooyun.org/tips/15826
+
+ 5.渗透测试工具实战技巧合集: http://www.freebuf.com/sectool/105524.html
+
+ 6.Web服务器在外网能裸奔多久？: http://rdcqii.hundsun.com/portal/article/447.html
+
+ 7.在调试器里看百度云管家: http://geek.csdn.net/news/detail/79743
+
+ 8.浅析HTTPS中间人攻击与证书校验: http://drops.wooyun.org/tips/17078
+
+ 
+
+L.网络
+
+ 1.TCP/UDP常用端口列表：http://wsgzao.github.io/post/service-names-port-numbers/
+
+ 2.Nginx配置参数中文说明：http://dockone.io/article/1482
+
+ 3.TCP恋爱史：三次握手和四次分手: http://www.codeceo.com/article/tcp-3-handshack.html
+
+ 
+
+M.游戏
+
+ 1.2016年最火的15款HTML5游戏引擎：http://diycode.cc/topics/16
+ 2.阿里自主研发的互动游戏引擎Hilo：http://www.html5cn.org/article-9409-1.html
+
+ 3.ReactNative动画研究: http://tw93.github.io/2016-04-05/the-thinking-about-react-native-animated.html
+
+ 4.Programming Puzzles & Code Golf： 点击打开链接
+
+ 
+
+N.数据库
+
+  1.SQL养成一个好习惯是一笔财富:http://www.xiongge.club/508.html
+
+  2.三招搞挂MySQL：http://www.58maisui.com/2016/05/13/article-173/
+
+ 3.21条最佳MySQL性能优化: http://www.phpxs.com/post/5092
+
+  4.PHP+MySQL数据库教程: http://www.5idev.com/php-mysql.shtml
+
+ 5.数据库必会必知之SQL四种语言：DDL DML DCL TCL: http://www.bysocket.com/?p=1174
+
+ 6.MySQL查询语句执行过程: http://shanks.leanote.com/post/MySQL查询过程
+
+  7.SQL性能优化：点击打开链接
+
+ 8.MySQL知识分享网站：http://ourmysql.com/
+
+ 9.MySQL分页性能优化指南:http://www.codeceo.com/article/mysql-page-performance.html
+
+ 10.MySQL数据库优化的最佳实践:http://www.codeceo.com/article/best-database-better.html
+
+ 
+
+O.大数据
+
+ 1.史上最全的大数据学习资源汇总：http://www.cnblogs.com/dunitian/p/5461280.html
+
+ 2.Spark性能优化指南—高级篇：http://tech.meituan.com/spark-tuning-pro.html
+
+ 3.史上最全的机器学习资料（上）：https://yq.aliyun.com/articles/43089
+
+
+
+P.操作系统OS
+
+  1.Java程序员眼中的Linux: 点击打开链接
+
+  2.80多个Linux系统管理员必备的监控工具: http://www.smartcitychina.cn/QianYanJiShu/2016-05/7057.html
+
+  3.fork()函数与Linux中的多线程编程: http://www.techug.com/linux-fork
+
+ 
+
+Q.心得杂谈
+
+ 1.知乎上赞同数最高的回答：点击打开链接
+
+ 2.16个你一定不知道的上网技巧:Google搜索：http://www.7huoxing.com/?p=25052
+
+ 3.程序员有哪些电脑科技的技能可以让非程序员感到神奇: https://www.zhihu.com/question/30719851
+
+ 4.10个帮程序员减压放松的网站：点击打开链接 第一个很好用，推荐点击打开链接
+
+ 5.6个更好用的搜索工具：http://www.jianshu.com/p/60512cd2b985
+
+ 6.程序员是怎样一群人:http://www.cocoachina.com/programmer/20150623/12201.html
+
+ 7.什么叫大数据？世界地图告诉你！http://www.58maisui.com/2016/05/03/article-87/
+
+ 8.一切从搭建博客开始谈起:点击打开链接
+
+ 9.15个提高Google搜索效率的小技巧：http://sspai.com/34150
+
+ 10.一键收藏至Github: https://segmentfault.com/a/1190000005052495
+
+ 11.Mac下提升工作效率的方式：http://mrpeak.cn/blog/mac-efficiency/
+
+ 12.Google镜像站搜集：http://www.cocoachina.com/programmer/20150611/12117.html
+
+ 13.编程的智慧: http://www.yinwang.org/blog-cn/2015/11/21/programming-philosophy
+
+ 14.程序员们的高考试卷：点击打开链接
+
+ 15.史上最奇葩的5个编程语言,其指令更算计了奶牛、空格: http://geek.csdn.net/news/detail/79696
+
+ 16.全球最杰出的14位程序员：http://www.csdn.net/article/2014-07-11/2820615-14-world-best-programmers
+
+ 17.可观察宇宙：http://m.wanga.me/2013/04/Scale2.swf
+
+ 18.如何为你的开源项目选择一个合适的开源协议：http://diycode.cc/topics/164

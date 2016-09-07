@@ -1,0 +1,7 @@
+<jsp:include page="<%=uri %>/include.jsp"></jsp:include> 
+报错：attribute for %>" is not properly terminated 
+原因：标签的page属性值可以是相对路径URL或者<%=表达式 %>，但同时只能存在其中一种
+ 
+<jsp:include page="/frame/include.jsp"></jsp:include> 表示绝对路径
+<jsp:include page="frame/include.jsp"></jsp:include> 表示相对路径
+<jsp:include page="<%=uri %>"></jsp:include> 两个引号与<%=uri %>之间不能有空格

@@ -1,0 +1,25 @@
+IP：211.136.85.187
+端口：51078
+用户名：smsdevp
+密码：smsdevpsmsdevp
+
+跳板
+IP：121.40.125.15
+端口：12980
+用户名：root
+密码：Nv76ry65CF32
+
+查看当前java进程
+ps -afe | grep java
+
+根据进程ID杀死指定进程
+kill 进程ID
+
+杀死所有java进程
+killall java
+
+通过shell脚本可启动网关程序,脚本位于/home/smsdevp/下
+cd /home/smsdevp/
+./tl_sms_platformstart_new.sh 启动jar，没有包月，可手动启动
+./tl_sms_platformstart_1_process.sh 启动一组旧网关
+./tl_sms_platformstart_3_process.sh 启动六组旧网关

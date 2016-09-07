@@ -1,0 +1,17 @@
+jar包生成方法
+1:在工程根目录开启cmd
+2:运行maven指令，其他命令可自行通过网络查阅
+mvn clean package
+3:如果配置了sftp/ssh用户名密码可直接上传至指定位置（不是必要的操作）
+mvn clean install
+
+注意事项:mvn会在项目根目录下生成target文件夹，如访问了target或访问其下文件打包将会失败，具体看打包信息。其他问题可通过网络自行解决。
+
+部署方式
+可通过ftp或sftp将jar包放至 /home/smsdevp/newApp/ 下对应文件夹
+可用nohup启动或者脚本启动
+
+日志文件位于 /home/smsdevp/newApp/ 对应项目的 log 文件夹里
+例如当日mt日志为 /home/smsdevp/newApp/mt/log/cmpp-mt.log 
+如果使用脚本启动日志将位于 /home/smsdevp/logs
+例如mt日志为 /home/smsdevp/logs/cmpp-mt.jar.log 

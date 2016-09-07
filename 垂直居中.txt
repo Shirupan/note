@@ -1,0 +1,22 @@
+http://www.webhek.com/translatey-vertical-align
+
+.element {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+
+使用这种方法，元素在沿translateY移动时会损失“半个像素”，导致元素变得模糊。对于这种问题，解决的方法是对其父元素使用preserve-3d属性。CSS代码如下：
+
+.parent-element {
+  -webkit-transform-style: preserve-3d;
+}
+
+.element {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,13 @@
+HTML绝对路径(absolute path)指带域名的文件的完整路径。
+比如http://www.xxx.com/index.html
+HTML相对路径(Relative Path)，"../"表示上一级目录
+<a href = "../index.html">index.html</a>
+
+Servlet中，"/"代表Web应用的跟目录。
+例如："./" 代表当前目录, "../"代表上级目录。
+
+<%=request.getContextPath()%>也表示根目录，引用css、js及使用a、img等标签时路径可混合使用<%=request.getContextPath()%>+路径，但是在使用include页面时不能使用这种写法。
+<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet"> 正确写法
+<a href="<%=request.getContextPath()%>/index.jsp"></a> 正确写法
+<jsp:include page="/index.jsp"></jsp:include> 正确写法
+<jsp:include page="<%=request.getContextPath()%>/index.jsp"></jsp:include> 错误写法
