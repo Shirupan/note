@@ -1,0 +1,43 @@
+用maven将项目打成war包
+cmd到项目根目录
+"mvn clean package"命令打默认包
+"mvn clean install"如果引入了其他项目，先将其打包
+"mvn clean -Pxxx package"命令根据pom.xml文件中配置id打不同配置的
+
+pom.xml文件
+<finalName>${final.name}</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>src/main</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
+<profiles>
+		<profile> 
+			<id>product</id> 
+			<properties>
+				<runtime.env>src\packageConfig\product</runtime.env> //根据"项目/src/packageConfig/product"文件夹下的config.properties等配置文件打包
+				<final.name>xxx</final.name>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault> 
+			</activation>
+		</profile>
+		<profile> 
+			<id>test</id> 
+			<properties>
+				<runtime.env>src\packageConfig\test</runtime.env>  //根据"项目/src/packageConfig/test"文件夹下的config.properties等配置文件打包
+				<final.name>xxx-test</final.name>
+			</properties>
+		</profile>
+	</profiles>
+
+如果打包过程提示缺失文件可到mvn库搜索"http://search.maven.org/#search"
+导包方法：
+右键工程-》Maven-》add Dependency-》在enter...下搜索
+
+打成war包放于该目录"apache-tomcat\webapps"下
+可根据"http://localhost:8080/war包文件名/.."访问该网站

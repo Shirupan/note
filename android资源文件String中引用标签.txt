@@ -1,0 +1,5 @@
+<string name="name">一些文字<xliff:g id="id">%1$s</xliff:g><xliff:g id="id">%2$s</xliff:g></string>
+
+context.getResources().getString(R.string.name, Object...);
+
+Object...可填进xliff:g标签

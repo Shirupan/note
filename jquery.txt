@@ -1,0 +1,16 @@
+2.0之后的版本不支持IE6，IE7，IE8
+基础语法是：$(selector).action()
+美元符号定义 jQuery
+选择符（selector）“查询”和“查找” HTML 元素
+jQuery 的 action() 执行对元素的操作
+http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp
+$(this)获取当前元素
+$("p")根据便签获取对象
+$(".test")根据class获取对象
+$("#test")根据id获取对象
+$("[href]") 根据属性获取对象
+$("[href='#']")根据属性值获取对象，值为#
+$("[href!='#']")根据属性值获取对象，值不为#
+$("[href$='.jpg']")根据属性值获取对象，值以 ".jpg" 结尾
+$("p.intro") 选取所有 class="intro" 的 <p> 元素。
+$("p#demo") 选取所有 id="demo" 的 <p> 元素。

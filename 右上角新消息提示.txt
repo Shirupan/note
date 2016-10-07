@@ -1,0 +1,34 @@
+Ö¡²¼¾Ö textview ±³¾°
+
+
+<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="bottom|center" >
+
+                    <RadioButton
+                        android:id="@+id/tab_home"
+                        style="@style/MMTabButton"
+                        android:checked="true"
+                        android:drawableTop="@drawable/tab_weixin"
+                        android:text="Î¢ÐÅ" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="top|right|center"
+                    android:paddingRight="10.0dip" >
+
+                    <TextView
+                        android:id="@+id/main_tab_unread_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_unread_bg"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@android:color/white"
+                        android:textSize="10.0dip"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </FrameLayout>

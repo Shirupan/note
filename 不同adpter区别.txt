@@ -1,0 +1,146 @@
+1.SimpleAdapter（很多时候需要继承它，来自定义adapter）：
+
+simpleAdapter的扩展性最好，可以定义各种各样的布局出来，可以放上ImageView（图片）等。可以显示比较复杂的列表，包括每行显示图片、文字等，但不能对列表进行后期加工（在java代码中加工），也是只是单纯的负责显示。
+使用simpleAdapter的数据用一般都是HashMap构成的List，list的每一节对应ListView的每一行。HashMap的每个键值数据映射到布局文件中对应id的组件上。因为系统没有对应的布局文件可用，我们可以自己定义一个布局imagelayout.xml。
+public class ImageListView extends ListActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+  
+        SimpleAdapter adapter = new SimpleAdapter(this,getData(),R.layout.imagelayout,
+                new String[]{"title","info","img"},
+                new int[]{R.id.title,R.id.info,R.id.img});
+        setListAdapter(adapter);
+    }
+    private List<Map<String, Object>> getData() {
+        List<Map<String, Object>> mList = new ArrayList<Map<String, Object>>();   
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("title", "tp");
+        map.put("info", "fb");
+        map.put("img", R.drawable.icon);
+        mList.add(map);
+  
+        map = new HashMap<String, Object>();
+        map.put("title", "tp2");
+        map.put("info", "fb2");
+        map.put("img", R.drawable.icon2);
+        list.add(map);           
+        return list;
+    }
+}
+
+2.ArrayAdapter：只可以简单的显示一行文本
+
+使用了ArrayAdapter(Context context, int textViewResourceId, List<T> objects)来装配数据，要装配这些数据就需要一个连接ListView视图对象和数组数据的适配器来两者的适配工作，ArrayAdapter的构造需要三个参数，依次为this,布局文件（注意这里的布局文件描述的是列表的每一行的布局，android.R.layout.simple_list_item是系统定义好的布局文件只显示一行文字，数据源(一个List集合)。同时用 setAdapter（）完成适配的最后工作。
+
+public class ImageListView extends Activity {
+    private ListView mListView;
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);           
+        mListView = new ListView(this);
+        mListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item, getData()));
+        setContentView(mListView);
+    } 
+      
+    private List<String> getData(){
+        List<String> data = new ArrayList<String>();
+        data.add("百度图片");
+        data.add("腾讯图片");
+        data.add("360图片");          
+        return data;
+    }
+}
+
+3.BaseAdapter（自定义的时候很多，尤其是一些复杂的布局，不自定义实现不了啊）：实现复杂的列表布局，由于BaseAdapter是一个抽象类，使用该类需要自己写一个适配器继承该类，正是由于继承了该类，需要我们重写一些方法，让我们可以在代码里控制列表的样式，更加灵活。
+public class ImageListView extends ListActivity {   
+    private List<Map<String, Object>> mData;       
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mData = getData();
+        ImageBaseAdapter adapter = newImageBaseAdapter(this);
+        setListAdapter(adapter);
+    }   
+    private List<Map<String, Object>> getData() {
+        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>(); 
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("title", "tp");
+        map.put("info", "fb");
+        map.put("img", R.drawable.icon);
+        list.add(map);   
+ 
+        map = new HashMap<String, Object>();
+        map.put("title", "tp1");
+        map.put("info", "fb2");
+        map.put("img", R.drawable.icon2);
+        list.add(map);           
+        return list;
+    }      
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+    }      
+    public void showInfo(){
+        new AlertDialog.Builder(this)
+        .setTitle("listview")
+        .setMessage("介绍...")
+        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        }).show();         
+    }
+    public final class ViewHolder{
+        public ImageView img;
+        public TextView title;
+        public TextView info;
+        public Button viewBtn;
+    }
+ 
+    public class ImageBaseAdapter extends BaseAdapter{  
+        private LayoutInflater mInflater;  
+        public ImageBaseAdapter(Context context){
+            this.mInflater = LayoutInflater.from(context);
+        }
+        @Override
+        public int getCount() {
+            return mData.size();
+        }
+        @Override
+        public Object getItem(int arg0) {
+            return null;
+        }  
+        @Override
+        public long getItemId(int arg0) {
+            return 0;
+        }  
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder holder = null;
+            if (convertView == null) {                   
+                holder=new ViewHolder();                  
+                convertView = mInflater.inflate(R.layout.vlist, null);
+                holder.img = (ImageView)convertView.findViewById(R.id.img);
+                holder.title = (TextView)convertView.findViewById(R.id.title);
+                holder.info = (TextView)convertView.findViewById(R.id.info);
+                holder.viewBtn = (Button)convertView.findViewById(R.id.view_btn);
+                convertView.setTag(holder);                   
+            }else {                  
+                holder = (ViewHolder)convertView.getTag();
+            }                          
+            holder.img.setBackgroundResource((Integer)mData.get(position).get("img"));
+            holder.title.setText((String)mData.get(position).get("title"));
+            holder.info.setText((String)mData.get(position).get("info"));               
+            holder.viewBtn.setOnClickListener(new View.OnClickListener() {                 
+                @Override
+                public void onClick(View v) {
+                    showInfo();               
+                }
+            });          
+            return convertView;
+        }     
+    }   
+}
+
+系统首先调用getCount（）函数，根据他的返回值得到listView的长度（这也是为什么在开始的第一张图特别的标出列表长度），然后根据这个长度，调用getView（）逐一绘制每一行。如果你的getCount（）返回值是0的话，列表将不显示同样return 1，就只显示一行。
+系统显示列表时，首先实例化一个适配器（这里将实例化自定义的适配器）。当手动完成适配时，必须手动映射数据，这需要重写getView（）方法。系统在绘制列表的每一行的时候将调用此方法。getView()有三个参数，position 表示将显示的是第几行，covertView是从布局文件中inflate来的布局。我们用LayoutInflater的方法将定义好的 vlist2.xml文件提取成View实例用来显示。然后将xml文件中的各个组件实例化（简单的findViewById()方法）。这样便可以将数据对应到各个组件上了。

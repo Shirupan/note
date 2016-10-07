@@ -1,0 +1,11 @@
+当通过ajax异步调用成功时(200)，会调用 success函数 。success函数语法为：
+//请求成功后回调函数。这个方法有两个参数：服务器返回数据，返回状态function (data, textStatus)
+
+当通过ajax异步调用出错时(404)，会调用 error函数 。error函数语法为：
+//(默 认: 自动判断 (xml 或 html)) 请求失败时调用时间。
+//参数有以下三个：XMLHttpRequest 对象、错误信息、（可选）捕获的错误对象。
+//如果发生了错误，错误信息（第二个参数）除了得到null之外，
+//还可能是"timeout", "error", "notmodified" 和 "parsererror"。
+//textStatus: "timeout", "error", "notmodified" 和 "parsererror"。
+error：function (XMLHttpRequest, textStatus, errorThrown)
+

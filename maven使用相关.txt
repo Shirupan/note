@@ -1,0 +1,110 @@
+【注意】maven配置
+
+maven要运行在JDK：外部JAVA_HOME指定到JDK，eclipse中runtime指定到JDK
+
+在eclipse中配置好maven的索引功能，可以事半功倍（在Maven Repositories面板中配置）
+
+下载整个索引步骤见网址：
+
+http://www.cnblogs.com/mingforyou/archive/2013/08/23/3276864.html
+
+ 
+
+【步骤】eclipse中把web项目转为maven项目
+
+主要步骤可以参考网上的文章
+
+http://zk1878.iteye.com/blog/1222330
+
+可以特别关注以下操作：
+
+在项目上右键Configure--->convert to Maven project
+
+依赖到的自建Maven项目也可以引入到dependency并设置作用域为compile
+
+在项目上右键属性--->Deployment Assembly要配置web项目部署路径
+
+ 
+
+【步骤】编写pom.xml
+
+在中央仓查找类库坐标
+
+http://mvnrepository.com/
+
+如果eclipse中配置好了maven索引，可以直接在pom文件的Dependencies视图添加
+
+中央仓找不到的类包，可以mvn install:install-file 命令安装到本地库，例如：
+
+mvn install:install-file -Dfile=kaptcha-2.1.1.jar -DgroupId=com.google.code.kaptcha -DartifactId=kaptcha -Dversion=2.1.1 -Dpackaging=jar
+
+ 
+
+【注意】版本冲突
+
+NoSuchMethodError：GenericTypeResolver.resolveReturnTypeForGenericMethod
+
+资料如下
+
+http://engineering.wix.com/2013/04/25/maven-classpath-hell-nosuchmethoderror-when-building-a-spring-context/
+
+原因是Spring-Context-Support引用了高版本Spring3.2，但项目中使用的是低版本Spring2.1不存在这个方法。解决办法是统一版本。
+
+ 
+
+【步骤】自己搭建nexus私服
+
+主要步骤如下：
+
+http://www.360doc.com/content/14/0514/09/1906950_377442397.shtml
+
+非root账户最好先用root配置sudo命令/etc/sudoers
+
+解决wrapper  | Unable to start JVM: No such file or directory：
+
+在/nexus/bin/jsw/conf/wrapper.conf中将wrapper.java.command改为绝对路径
+
+搭建完成后配置仓库
+
+http://www.iteye.com/topic/1126678
+
+
+需要把maven配置进ecilpse中:
+maven项目，tomcat在发布项目的时候没有同时发布maven依赖所添加的jar包，
+需要设置一下eclipse：
+项目 —> 属性 -> Deployment Assembly -> Add -> Java Build Path Entries -> 选择Maven Dependencies -> Finish -> OK
+把对应的Maven依赖包也发布到tomcat，调试时会自动把那些jar发布到指定目录下，tomcat也能找到那些jar了。
+
+
+本地测试需要将servlet注释，否则将跟tomcat内的包冲突无法调试
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+WEB-INF/classes文件夹下不能有东西否则会打入war包使配置无效
+
+
+json-lib对应jdk13和jdk15版本
+<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+
+错误Dynamic Web Module 2.5 or newer需要修改web.xml文件
+
+An internal error occurred during: "Updating Maven Project" java.lang.NullPoint
+1、右键点击我的项目，选择 Maven -> Remove(disable) Maven Nature.
+2、打开cmd命令行，进入到你的工程文件夹中，并且 运行 “mvn eclipse:clean” 
+3、右键点击你的工程，并且选择 “Configure -> Convert into Maven Project”

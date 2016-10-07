@@ -1,0 +1,13 @@
+Í¼Æ¬½âÎö
+//		JPEGImageEncoder imageEncoder = JPEGCodec.createJPEGEncoder(op);
+
+		try {
+			BufferedImage bufferedImage = new BufferedImage(maxWidth,
+					maxHeight, BufferedImage.TYPE_INT_RGB);
+			bufferedImage.getGraphics().drawImage(itemp, 0, 0, maxWidth, maxHeight,
+					null);
+//			imageEncoder.encode(bufferedImage);
+			ImageIO.write(bufferedImage, "jpeg", op);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}

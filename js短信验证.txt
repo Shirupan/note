@@ -1,0 +1,17 @@
+	var wait = 60;
+	function getCode(o) {
+
+		if (wait == 0) {
+			o.removeAttribute("disabled");
+			o.value = "获取验证";
+			wait = 60;
+		} else {
+			o.setAttribute("disabled", true);
+			o.value = "重新发送(" + wait + ")";
+			wait--;
+			setTimeout(function() {
+				getCode(o)
+			}, 1000)
+		}
+
+	}

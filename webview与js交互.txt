@@ -1,0 +1,34 @@
+在js内使用同名interfaceName即可调用android端方法	
+	
+	android端
+	// 设置支持javascript
+	webpobView.getSettings().setJavaScriptEnabled(true);
+	// js能调用android项目方法
+	webpobView.addJavascriptInterface(new WebJsInterface(context), interfaceName);
+		
+	public class WebJsInterface {
+	Context context = null;
+
+	public WebJsInterface(Context context) {
+		this.context = context;
+	}
+
+	@android.webkit.JavascriptInterface
+	public void toastLong(String tip) {
+
+		Toast.makeText(context, tip, Toast.LENGTH_LONG).show();
+
+	}
+	
+	@android.webkit.JavascriptInterface
+	public void toastShort(String tip) {
+
+		Toast.makeText(context, tip, Toast.LENGTH_SHORT).show();
+
+	}
+	}
+	
+	
+	
+	web端
+	interfaceName.toastShort(tip);

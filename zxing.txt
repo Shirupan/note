@@ -1,0 +1,3 @@
+CaptureActivity
+handleDrcode中传送数据，判断数据类型。
+

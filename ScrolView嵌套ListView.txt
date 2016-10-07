@@ -1,0 +1,113 @@
+直接把listview和expandablelistview放进scrollview里只会显示第一行信息
+默认情况下Android是禁止在ScrollView中放入另外的ScrollView的，它的高度是无法计算的。
+http://blog.csdn.net/swust_chenpeng/article/details/17413955
+//expandablelistview可以重写onMeasure方法
+public class CustomExpandableListView extends ExpandableListView {  
+  
+    public CustomExpandableListView(Context context, AttributeSet attrs) {  
+        super(context, attrs);  
+        // TODO Auto-generated constructor stub  
+    }  
+  
+    @Override  
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {  
+        // TODO Auto-generated method stub  
+        int expandSpec = MeasureSpec.makeMeasureSpec(Integer.MAX_VALUE >> 2,  
+  
+        MeasureSpec.AT_MOST);  
+  
+        super.onMeasure(widthMeasureSpec, expandSpec);  
+    }  
+} 
+//动态计算expandablelistview的高度，xxx_group.xml和xxx_child.xml的最外层要用linearlayout，不能用relativelayout
+private void setListViewHeight(ExpandableListView listView) {  
+        ListAdapter listAdapter = listView.getAdapter();  
+        int totalHeight = 0;  
+        int count = listAdapter.getCount();  
+        for (int i = 0; i < listAdapter.getCount(); i++) {  
+            View listItem = listAdapter.getView(i, null, listView);  
+            listItem.measure(0, 0);  
+            totalHeight += listItem.getMeasuredHeight();  
+        }  
+  
+        ViewGroup.LayoutParams params = listView.getLayoutParams();  
+        params.height = totalHeight  
+                + (listView.getDividerHeight() * (listAdapter.getCount() - 1));  
+        listView.setLayoutParams(params);  
+        listView.requestLayout();  
+    }  
+
+//scrollveiew中嵌套的listview的话，前两种都行，还有一种如下
+public class ViewGroupForListView extends LinearLayout implements View.OnClickListener {  
+      
+    private ListAdapter mAdapter = null;  
+    private OnItemClickListener mListener = null;  
+      
+    public ViewGroupForListView(Context context) {  
+        super(context);  
+    }  
+  
+    public ViewGroupForListView(Context context, AttributeSet attrs) {  
+        super(context, attrs);  
+        // TODO Auto-generated constructor stub  
+        this.setOrientation(VERTICAL);  
+    }  
+      
+    /** 
+     * 绑定数据 
+     */  
+    protected void bindData() {  
+        int count = mAdapter.getCount();  
+        for(int i = 0; i < count; i++) {  
+            View v = mAdapter.getView(i, null, null);  
+            v.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));  
+            v.setOnClickListener(this);  
+            v.setId(i);  
+            addView(v, i);  
+        }  
+    }  
+      
+    /** 
+     * 设置adapter 
+     * @param adapter 
+     */  
+    public void setAdapter(ListAdapter adapter) {  
+        mAdapter = adapter;  
+        if(this.getChildCount() != 0) {  
+            removeAllViews();  
+        }  
+        bindData();  
+    }  
+      
+    /** 
+     * 获取adapter 
+     * @return 
+     */  
+    public ListAdapter getAdapter() {  
+        return mAdapter;  
+    }  
+      
+    /** 
+     * 绑定监听 
+     * @param listener 
+     */  
+    public void setOnItemClickListener(OnItemClickListener listener) {  
+        this.mListener = listener;  
+    }  
+      
+    @Override  
+    public void onClick(View v) {  
+        // TODO Auto-generated method stub  
+        if(mListener != null) {  
+            mListener.onItemClick(v.getId(), mAdapter);  
+        }  
+    }  
+      
+    /** 
+     * 监听接口 
+     * @author Visual 
+     * 
+     */  
+    public interface OnItemClickListener {  
+        public void onItemClick(int position, ListAdapter adapter);  
+    }  

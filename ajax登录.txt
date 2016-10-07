@@ -1,0 +1,73 @@
+login.jsp
+<script type="text/javascript">
+		function signInAjax() {
+			
+			var oriData = {
+				userName : $("#inputEmail").val(),
+				password : $("#inputPassword").val()
+			};
+			$.ajax({
+				type : "post",
+				url : "check-login.jsp",
+				async : false,
+				data : "info="+JSON.stringify(oriData),
+				dataType : "json",
+				success : function(msg) {
+										
+					if (msg.status == "success") {
+
+						location.href='console.jsp';
+						
+					} else {
+						alert('” œ‰ªÚ√‹¬Î¥ÌŒÛ!');
+					}
+				},
+				error : function () {
+					alert('” œ‰ªÚ√‹¬Î¥ÌŒÛ!');
+
+				}
+			});
+			
+		}
+		
+	</script>
+
+<input type="button" onclick="signInAjax()" value="Sign in">
+
+
+
+
+
+check-login.jsp
+try {
+		String info = new String(request.getParameter("info").trim());
+		GsonBuilder gsonBuilder = new GsonBuilder();
+		gsonBuilder.setLongSerializationPolicy(LongSerializationPolicy.STRING);
+		Gson gson = gsonBuilder.create();
+		User user = gson.fromJson(info, User.class);
+
+		UserService userService = new UserService();
+		long userId = userService.checkLoginUser(user);
+		if (userId > 0) {
+			BaseRsp baseRsp = new BaseRsp();
+			baseRsp.setStatus("success");
+			baseRsp.setData(user);
+			String rsp = gson.toJson(baseRsp);
+
+			session.setAttribute("user", user);
+			if (session.getAttribute("lastFileName") != null
+					&& session.getAttribute("lastFileName").toString().length() > 0) {
+				response.sendRedirect(session.getAttribute("lastFileName").toString());
+				session.removeAttribute("lastFileName");
+				response.sendRedirect("login.jsp");
+			} else {
+				out.print(rsp);
+			}
+		} else {			
+			String msg = "check user failure!";
+			out.print("{\"status\":\"error\",\"msg\":\"" + msg + "\"}");
+		}
+
+	} catch (Exception e) {
+		out.print("{\"status\":\"error\",\"msg\":\"" + e.getMessage() + "\"}");
+	}

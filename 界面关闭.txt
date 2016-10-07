@@ -1,0 +1,2 @@
+清楚掉之前栈内所有的activity，并新建一个栈。
+intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

@@ -1,0 +1,2 @@
+javac com\sl\Main\MyReturn.java
+java com.sl.Main.MyReturn

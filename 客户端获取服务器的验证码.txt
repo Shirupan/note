@@ -1,0 +1,17 @@
+webview在获取服务器验证码后登录发送http请求要带上验证码页面的cookie
+
+webview请求验证码
+CookieManager cookieManager = CookieManager.getInstance();
+        String cStr = cookieManager.getCookie("http://sso.wangpj.net/code");
+        String[] cstrs = cStr.split(";");
+        
+        for (String s : cstrs) {
+        	if (s.startsWith("idp_session")) {
+        		idp_session = s.split("=")[1];
+        		break;
+        	}
+        }
+
+http请求带上cookic
+HttpGet.setHeader("Cookie", "idp_session=" + session);
+HttpPost.setHeader("Cookie", "idp_session=" + session);
