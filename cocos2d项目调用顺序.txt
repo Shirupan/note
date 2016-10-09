@@ -1,0 +1,1 @@
+µ÷ÓÃË³ĞòÎª main() -> AppDelegate ->xx::scene() -> CREATE_FUNC() -> init()
