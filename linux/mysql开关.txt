@@ -1,0 +1,26 @@
+etc/my.cnf配置
+log_bin = /data/mysql_binlog/bin_log.index
+datadir = /data/mysql_data
+port = 3306
+server_id = 2
+lower_case_table_names=1
+pid-file = /data/mysql_data/mysql.pid
+
+确保mysql属于目录下所有路径的群组
+/data/mysql_binlog
+/data/mysql_data
+chmod 777 mysql_binlog/ -R
+chmod 777 mysql_data/ -R
+chown mysql.mysql mysql_binlog/ -R
+chown mysql.mysql mysql_data/ -R
+
+关闭防火墙
+service iptables stop
+
+修改配置文件关闭selinux
+vi /etc/selinux/config 
+ss -anlt
+
+查看mysql端口
+ps aux|grep mysql
+cat mysql.pid 
