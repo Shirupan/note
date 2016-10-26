@@ -1,0 +1,213 @@
+检测硬件是否支持虚拟化：
+	grep --color=auto -Ei "vmx|svm" /proc/cpuinfo
+	若有反应即可
+    
+安装libvirt环境:
+     yum install qemu* libvirt* kvm kmod-kvm kvm-qemu-img libvirt python-virtinst virt-manager virt-viewer bridge-utils avahi
+    /etc/init.d/messagebus restart
+    /etc/init.d/avahi-daemon restart 
+    /etc/init.d/libvirtd restart 
+    /sbin/chkconfig messagebus on 
+    /sbin/chkconfig avahi-daemon on
+    
+    service libvirtd start
+    chkconfig libvirtd on
+    
+    
+安装virtio-win:
+    wget https://fedorapeople.org/groups/virt/virtio-win/virtio-win.repo -O /etc/yum.repos.d/virtio-win.repo
+    sudo yum install virtio-win
+    
+        安装后文件在：  /usr/share/virtio-win/*.iso: ISO CDROM containing all the drivers. See details below
+                        /usr/share/virtio-win/*.vfd: VFD floppy images for using during install of Windows XP
+                        /usr/share/virtio-win/drivers: Copy of the extracted VFD driver contents
+                        /usr/share/guest-agent/*.msi:
+                        
+        参考网站：http://fedoraproject.org/wiki/Windows_Virtio_Drivers
+                    https://aur.archlinux.org/packages/virtio-win/
+    
+    
+新建桥接网卡：
+    拷贝eth0的配置文件为br0:
+        cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-br0
+        
+        修改ifcfg-eth0：
+            注释掉IP,掩码，网关，添加：BRIDGE=br0
+        
+        重启网络服务即可，在这里，我们只需要将网络参数IP等配置在ifcfg-br0的配置文件上即可。
+        
+        
+        
+        ==============================================================================
+        创建网卡配置文件：br0
+        vi /etc/sysconfig/network-scripts/ifcfg-br0
+            TYPE=Bridge
+            BOOTPROTO=static
+            NAME=br0
+            DEVICE=br0
+            ONBOOT=yes
+            IPADDR=192.168.1.10
+            NETMASK=255.255.254.0
+            GATEWAY=192.168.1.1
+            DNS1=192.168.1.1
+            DNS2=114.114.114.114
+            
+        vi /etc/sysconfig/network-scripts/ifcfg-eth0
+        
+        
+创建虚拟机：
+    创建磁盘：
+        qemu-img create -f qcow2 /data/centos-6.4.qcow2 10G sparse
+       
+    创建虚拟机：
+        virt-install --virt-type kvm -n vm_admin --ram 512 --disk path=/vmmc/vm_admin/vm_admin.qcow2,size=40,format=qcow2,sparse --network bridge=br0 --graphics vnc,listen=0.0.0.0 --noautoconsole --os-type=linux --os-variant=rhel6 --cdrom=/vmmc/CentOS-6.7-x86_64-bin-DVD1.iso
+        
+        OR
+        virt-install -n cvm60_win7 --memory 1024 --cdrom /iso/cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso  --disk /data/cvm60_win7/disk.qcow2  --network bridge=br0 --graphics vnc,listen=0.0.0.0 --noautoconsole
+        
+    使用VNC完成后续安装：
+        在链接时输入的是“IP:终端号”，例如192.168.1.2:0表示第一台启动的虚拟机。
+        终端号的查看：
+            virsh vncdisplay VM1
+            
+至此，虚拟机就安装完成。
+    查看虚拟机：
+        virsh list
+        virsh list --all
+        
+    启动虚拟机：
+        virsh start VM1
+        
+    关闭虚拟机：
+        virsh destroy VM1
+        
+    删除虚拟机：
+        virsh undefine VM1
+        
+    暂停虚拟机:
+        virsh suspend VM1
+    
+    启动暂停的虚拟机:
+        virsh resume VM1
+    
+
+我们可在安装完成后对虚拟机进行修改：
+
+    添加网卡：
+        virsh attach-interface VMhost –type bridge –source br0
+        
+    添加硬盘：
+        一、修改xml文件：
+            1、添加硬盘文件
+                qemu-img create -f qcow2 test_add.qcow2 10G
+            2、卸载VM1
+                virsh undefine VM1
+            3、编辑XML
+                编辑XML文件，复制原硬盘的xml信息并修改：
+                    <source file='/vmmc/vm_backup_data/mysql_backupdata2.qcow2'/>
+                    指到新硬盘文件
+                    <target dev='vdb' bus='virtio'/>
+                    修改dev
+                    删除<address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+            4、定义虚拟机
+                virsh define VM1.xml
+            5、启动虚拟机
+                virsh start VM1
+                
+    修改硬盘大小：
+        一、直接修改
+                安装libguestfs-tools：
+                    yum install libguestfs-tools -y
+                    
+                生成一个期望大小的镜像磁盘文件:
+                    qemu-img create -f qcow2 disk2.qcow2 50G
+                    
+                将虚拟机停下，使用virt-resize命令调整：
+                    virt-install --expand /dev/vda3 disk.qcow2 disk2.qcow2
+                    解释：/dev/vda3：为虚拟机里的需要调整大小的分区
+                        disk.qcow2：为原磁盘镜像文件
+                        disk2.qcow2：为新的磁盘镜像文件
+                        
+                删掉原虚拟机，修改xml文件中的磁盘文件路径或修改磁盘镜像的文件名，重新导入即可
+                
+        二、使用qemu-img resize 修改，但修改后需要在系统中重新修改分区大小，比较麻烦
+        
+                
+        
+    设置虚拟机自启动：
+        virsh autostart vm1
+        自启动就是将虚拟机创建一个连接到/etc/libvirt/qemu/autostart目录下
+        
+另外，还可在虚拟机的XML文件进行修改，修改前先将虚拟机关机，文件在/etc/libvirt/qemu/目录下，有一个和虚拟机同名的XML文件，修改即可，修改后使用命令：
+    
+    只定义不启动：virsh define /etc/libvirt/qemu/VM1.xml
+    
+    定义后立即启动：virsh create /etc/libvirt/qemu/VM1.xml
+    
+虚拟机的复制：
+    一、先将磁盘文件进行复制拷贝：
+        cp VM1.qcow2 VM2.qcow2
+    
+    二、导出配置文件：
+        virsh dumpxml VM1 > VM2.xml
+        
+    三、修改XML，主要修改：
+        <name>vm52</name>
+        <uuid>1cef81b1-420f-c554-0052-6aecb200b068</uuid>
+        <mac address='52:54:00:8b:00:52'/>
+		<source file='/vmmc/vm_sql/sql.qcow2'/>
+        另外的其他参数如内存、CPU等也是可以修改添加的
+        
+        某些需要改
+        <channel type='unix'>
+            <source mode='bind' path='/var/lib/libvirt/qemu/channel/target/domain-vm12_mysql/org.qemu.guest_agent.0'/>
+            <target type='virtio' name='org.qemu.guest_agent.0'/>
+            <address type='virtio-serial' controller='0' bus='0' port='1'/>
+        </channel>
+        里面的domain-vm12_mysql为你自己的虚拟机名字：
+            <source mode='bind' path='/var/lib/libvirt/qemu/channel/target/XXXXXXXXXXXX/org.qemu.guest_agent.0'/>
+        
+    四、修改后重新定义即可：
+        virsh define VM2.xml
+        或
+        virsh create VM2.xml
+
+
+
+虚拟机挂载ISO：（type是file）
+    <disk type='file' device='cdrom'>
+      <driver name='qemu' type='raw'/>
+      <source file='/usr/share/virtio-win/virtio-win.iso'/>
+      <backingStore/>
+      <target dev='hdc' bus='ide'/>
+      <readonly/>
+    </disk>
+
+    
+VNC中鼠标不同步问题：
+    在xml文件中加入一句：
+    <input type=’tablet’ bus=’usb’/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+首先需要安装epel
+yum list |grep epel
+yum install epel-release -y
+
+安装ngnix
+yum list |grep nginx
+选择el6版本的，没有需要到官网下载
+yum install nginx -y

@@ -1,0 +1,10 @@
+1 使用cocos2d-x-2.2\tools\project-creator文件夹中的create_project.py脚本，生成一个demo。
+2 拷贝Classes和Resources文件夹到刚生成的demo对应文件夹下
+3 用vs打开脚本生成的cocos2dx demo，此时那个项目下只有默认的几个类，我们需要手动添加其他的cpp和h文件
+4 接下来需要让游戏运行在手机上。首先拷贝Resources里的所有资源到\proj.android\assets文件夹下
+修改proj.android\jni里的android.mk文件，将所有的cpp文件加上。这条容易漏！
+5 用eclipse打开这个项目，注意不要选择 Copy projects into workspace。因为可能一些配置用的是相对路径，不然可能会找不到一些东西。
+6 修改项目属性，如图
+（1）C/C++ builder的build command为NDK目录下的ndk-builder
+（2）添加C/C++ Builder Environment NDK_MODULE_PATH，值为cocos2dx目录和cocos2dx目录\cocos2dx\platform\third_party\android\prebuilt。
+7 下面开始编译了。过个三五分钟就能在手机上看到游戏了！

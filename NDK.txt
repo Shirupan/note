@@ -1,0 +1,1 @@
+如果在eclipse里配置ndk却发现没有配置的选项，则需要此插件，放置在eclipse/plugins下，重启即可。详见：http://blog.csdn.net/jiezhi2013/article/details/38980077
