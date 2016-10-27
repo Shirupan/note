@@ -1,0 +1,2 @@
+刚安装完成的mysql默认生成两个无用户名无密码的用户和三个root用户
+如果连接不上mysql需要修改mysql.user的host为%
