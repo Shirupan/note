@@ -28,6 +28,7 @@
     
     
 新建桥接网卡：
+    多台虚拟机只需要一个网卡
     拷贝eth0的配置文件为br0:
         cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-br0
         
@@ -63,20 +64,20 @@
         virt-install --virt-type kvm -n vm_admin --ram 512 --disk path=/vmmc/vm_admin/vm_admin.qcow2,size=40,format=qcow2,sparse --network bridge=br0 --graphics vnc,listen=0.0.0.0 --noautoconsole --os-type=linux --os-variant=rhel6 --cdrom=/vmmc/CentOS-6.7-x86_64-bin-DVD1.iso
         
         OR
-        virt-install -n cvm60_win7 --memory 1024 --cdrom /iso/cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso  --disk /data/cvm60_win7/disk.qcow2  --network bridge=br0 --graphics vnc,listen=0.0.0.0 --noautoconsole
+        virt-install -n win7 --ram 3072 --cdrom /cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso  --disk path=/data/win7.qcow2,size=500,format=qcow2,sparse  --network bridge=br0 --graphics vnc,listen=0.0.0.0 --noautoconsole
         
     使用VNC完成后续安装：
         在链接时输入的是“IP:终端号”，例如192.168.1.2:0表示第一台启动的虚拟机。
         终端号的查看：
             virsh vncdisplay VM1
             
-至此，虚拟机就安装完成。
+至此，虚拟机就安装完成。find
     查看虚拟机：
         virsh list
         virsh list --all
         
     启动虚拟机：
-        virsh start VM1
+        virsh start VM1his
         
     关闭虚拟机：
         virsh destroy VM1

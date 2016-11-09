@@ -1,0 +1,7 @@
+yum
+
+File "/usr/bin/yum", line 30
+    except KeyboardInterrupt, e:
+
+python2.6 yum
+
