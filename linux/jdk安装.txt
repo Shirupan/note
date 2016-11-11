@@ -1,0 +1,10 @@
+wget http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz?AuthParam=1478848019_e1b5c0c5d1b9885b96c54df0baf8b7c0
+
+tar xzf jdk-8u111-linux-x64.tar.gz /usr/java/jdk1.8.0_111
+
+vi ~/.bashrc
+export JAVA_HOME=/usr/java/jdk1.8.0_111
+export JAVA_BIN=$JAVA_HOME/bin
+export JAVA_LIB=$JAVA_HOME/lib
+export CLASSPATH=.:$JAVA_LIB/tools.jar:$JAVA_LIB/dt.jar
+export PATH=$JAVA_BIN:$PATH
