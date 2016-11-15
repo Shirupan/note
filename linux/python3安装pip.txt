@@ -1,0 +1,22 @@
+python3 get-pip.py或者easy_install pip
+
+报错：
+zipimport.ZipImportError: can't decompress data; zlib not available
+解决办法：
+1、安装依赖zlib、zlib-devel
+2、重新编译安装Python
+
+安装zlib-devel、openssl-devel
+yum install zlib-devel
+yum install openssl-devel
+
+到python安装目录下
+
+编辑Modules/Setup文件
+vim Modules/Setup
+找到下面这句，去掉注释
+#zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
+重新编译安装：
+make
+make install 
+重新执行

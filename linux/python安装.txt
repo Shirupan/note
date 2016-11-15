@@ -8,8 +8,7 @@ CentOS下的Python版本一般都比较低，很多应用都需要升级python来完成。我装的centOS的
 3。进入解压后目录：cd Python-3.3.0 
 
 
-4。创建安装目录：mkdir /usr/local/python3.3 
-　　 
+4。创建安装目录：mkdir /usr/local/python3.3　　 
 
 5。编译安装：./configure --prefix=/usr/local/python3.3 
 如果报错

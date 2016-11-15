@@ -1,0 +1,2 @@
+这个脚本用于数据库备份
+需要python3.X的运行环境，需要安装pymysql模块和innobackupex
