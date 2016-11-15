@@ -1,2 +1,22 @@
 这个脚本用于数据库备份
 需要python3.X的运行环境，需要安装pymysql模块和innobackupex
+
+安装pymysql
+python3 -m pip install pymysql
+
+安装innobackupex
+wget https://www.percona.com/downloads/XtraBackup/Percona-XtraBackup-2.4.4/binary/tarball/percona-xtrabackup-2.4.4-Linux-x86_64.tar.gz
+tar zxf percona-xtrabackup-2.4.4-Linux-x86_64.tar.gz 
+cd percona-xtrabackup-2.4.4-Linux-x86_64
+cp bin/{xtrabackup,innobackupex} /usr/bin/
+cp man/man1/{xtrabackup.1,innobackupex.1} /usr/share/man/man1/
+
+执行备份
+python3 /data/backup.py -A -u root -p gangcaidemimahuanle /data/db_backup/ /etc/my.cnf --host 127.0.0.1
+
+加入定时任务
+yum install crontabs
+crontabs -e
+0 */1 * * * python /data/db_backup/backup.py -A -u root -p gangcaidemimahuanle /data/db_backup/ /etc/my.cnf --host 127.0.0.1
+
+

@@ -30,6 +30,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 已安装成功了。
 
+ln -s /usr/local/python3.5/bin/python3 /usr/bin/python3
 
 因为yum使用python2，因此替换为python3后可能无法正常工作，继续使用这个python2.6
 
