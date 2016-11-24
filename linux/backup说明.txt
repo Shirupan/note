@@ -16,7 +16,7 @@ python3 /data/backup.py -A -u root -p gangcaidemimahuanle /data/db_backup/ /etc/
 
 加入定时任务
 yum install crontabs
-crontabs -e
+crontab -e
 0 */1 * * * python /data/db_backup/backup.py -A -u root -p gangcaidemimahuanle /data/db_backup/ /etc/my.cnf --host 127.0.0.1
 
 

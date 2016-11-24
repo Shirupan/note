@@ -6,7 +6,7 @@ zipimport.ZipImportError: can't decompress data; zlib not available
 1、安装依赖zlib、zlib-devel
 2、重新编译安装Python
 
-安装zlib-devel、openssl-devel
+安装zlib-devel、openssl-devel（安装到默认版本python）
 yum install zlib-devel
 yum install openssl-devel
 
