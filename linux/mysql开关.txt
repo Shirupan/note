@@ -8,7 +8,7 @@ pid-file = /data/mysql_data/mysql.pid
 
 确保mysql属于目录下所有路径的群组
 /data/mysql_binlog
-/data/mysql_data
+/data/mysql_data（数据表，需要自行将表移入该路径）
 chmod 777 mysql_binlog/ -R
 chmod 777 mysql_data/ -R
 chown mysql.mysql mysql_binlog/ -R
