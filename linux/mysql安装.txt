@@ -17,3 +17,13 @@ CREATE USER 'username'@'%' IDENTIFIED BY 'password';
 1、file /usr/share/mysql/czech/errmsg.sys from install of MySQL-server-5.6.34-1.el6.x86_64 conflicts with file from package mysql-libs-5.1.73-7.el6.x86_64
    解决：yum -y remove mysql-libs-*
 
+登陆出错（默认密码不知是什么）Mysql ERROR 1045 (28000): Access denied for user 'root'@'localhost'
+这种问题需要强行重新修改密码，方法如下：
+/etc/init.d/mysql stop   (service mysqld stop )
+/usr/bin/mysqld_safe --skip-grant-tables
+另外开个SSH连接
+[root@localhost ~]# mysql
+mysql>use mysql
+mysql>update user set password=password("123456") where user="root";
+mysql>flush privileges;
+mysql>exit
