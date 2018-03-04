@@ -1,0 +1,53 @@
+./phddns
+
+输入服务器地址，如无特殊情况可使用默认值
+Enter server address(press ENTER use phlinux3.oray.net):
+ 
+
+输入您的Oray帐号名称
+Enter your Oray account:
+ 
+
+对应的Oray帐号密码
+Password:
+ 
+
+选择帮定的网卡，如无特殊，默认即可
+Network interface(s):
+eth0:192.168.141.18
+lo:127.0.0.1
+Choose one(default eth0):
+ 
+
+选择日志保存到哪个文件
+Log to use(default /var/log/phddns.log):
+ 
+
+保存配置文件，选择yes则直接保存到/etc/phlinux.conf，输入other可以指定文件
+Save to configuration file (/etc/phlinux.conf)?(yes/no/other):
+ 
+
+接下来程序将已交互模式开始运行
+192.168.141.18
+NIC bind success
+OnStatusChanged okConnecting
+OnStatusChanged okDomainListed
+OnDomainRegistered skyvense22.gicp.net
+OnStatusChanged okDomainsRegistered
+UserType: 0
+看到上面这些就表示登录成功，这个时候可以按ctrl+c先退出程序
+
+
+以后台模式启动花生壳并检查运行情况
+/data/phddns/phddns-2.0.6.x86_64/phddns -c /etc/phlinux.conf -d
+
+查看日志
+tail -f /var/log/phddns.log
+
+退出
+ps -A | grep phddns
+13731 ? 00:00:00 phlinux
+kill -9 13731
+
+可直接修改配置文件修改登录用户
+/etc/phlinux.conf

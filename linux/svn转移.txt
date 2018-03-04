@@ -1,0 +1,10 @@
+备份仓库
+svnadmin dump E:\Repositories\xxx > E:\xxx.dump
+创建一个新的仓库（避免冲突出现其他错误）
+svnadmin create /data/svn/xxx/
+导入仓库
+svnadmin load /data/svn/xxx/</data/xxx.dump
+
+之后修改账号密码权限文件passwd，authz，svnserve.conf
+
+对于以前的项目，重定向到新的svn服务器，右键->TortoiseSVN->Relocate，在弹出的对话框中填写新的地址，TortoiseSVN会提示修改成功，之后，就可以使用新的svn了

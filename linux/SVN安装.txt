@@ -1,0 +1,38 @@
+yum list *svn*
+yum install subversion.i686
+
+创建仓库位置
+mkdir -p /data/svn/svnfile
+svnadmin create /data/svn/svnfile/
+
+修改conf文件夹下文件
+vim passwd
+添加（用户名=密码）
+[users]
+srp=srp
+
+vim authz
+添加用户组与权限
+[groups]
+admin = srp
+[svnfile:/]
+@admin=rw
+
+vim svnserve.conf
+去掉注释
+[general]
+anon-access = read
+auth-access = write
+password-db = passwd
+authz-db = authz
+
+开启/关闭svn，默认端口为3690，也可指定端口
+svnserve -d -r /data/svn
+svnserve -d -listen-port 9999 -r /data/svn
+killall svnserve
+
+查看svn状态
+ps aux | grep svnserve
+netstat -ln |grep 3690
+
+可通过 svn://ip:port/svnfile访问svn
